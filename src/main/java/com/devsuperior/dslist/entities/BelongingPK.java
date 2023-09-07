@@ -5,7 +5,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Embeddable /* Encapsulando 2 atributos em uma classe só */
-public class BelogingPK {
+public class BelongingPK {
 
     @ManyToOne
     @JoinColumn(name = "game_id")
@@ -14,10 +14,10 @@ public class BelogingPK {
     @JoinColumn(name = "list_id")
     private GameList gamelist;
 
-    public BelogingPK() {
+    public BelongingPK() {
     }
 
-    public BelogingPK(Game game, GameList gamelist) {
+    public BelongingPK(Game game, GameList gamelist) {
         this.game = game;
         this.gamelist = gamelist;
     }
@@ -55,7 +55,7 @@ public class BelogingPK {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        BelogingPK other = (BelogingPK) obj;
+        BelongingPK other = (BelongingPK) obj;
         if (game == null) {
             if (other.game != null)
                 return false;

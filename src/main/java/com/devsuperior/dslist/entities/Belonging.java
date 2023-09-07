@@ -6,28 +6,28 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name = "tb_beloging")
-public class Beloging {
+@Table(name = "tb_belonging")
+public class Belonging {
 
     @EmbeddedId
-    private BelogingPK id = new BelogingPK();
+    private BelongingPK id = new BelongingPK();
 
     private Integer position;
 
-    public Beloging() {
+    public Belonging() {
     }
 
-    public Beloging(Game game, GameList list,Integer position) {
+    public Belonging(Game game, GameList list,Integer position) {
         id.setGame(game);
         id.setGamelist(list);
         this.position = position;
     }
 
-    public BelogingPK getId() {
+    public BelongingPK getId() {
         return id;
     }
 
-    public void setId(BelogingPK id) {
+    public void setId(BelongingPK id) {
         this.id = id;
     }
 
